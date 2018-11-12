@@ -3,7 +3,24 @@
   "version": "0.0.1",
   "description": "CSSファイルを抽象構文木レベルで比較するツール",
   "main": "index.js",
+  "bin": {
+    "diff-css-ast": "index.js"
+  },
   "repository": "https://github.com/milabo/css-ast-diff",
   "author": "milabo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "diff": "^3.5.0",
+    "postcss": "^7.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^5.2.0"
+  }
 }

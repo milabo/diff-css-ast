@@ -1,0 +1,1554 @@
+@charset "utf-8";
+/** ブランドカラー **/
+/** テキストカラー **/
+/* 全体背景 */
+/* ボーダー */
+/* グローバルメニュー */
+/* ヘッダー */
+/* 自治体からのお知らせ */
+/* 流行疾患情報 */
+/* アクションメッセージ */
+/* 施設からのお知らせ */
+/* 汎用リスト */
+/* スケジュール */
+/* 施設検索 */
+/* 医療機関検索 */
+/* 保育施設検索 */
+/* パネル */
+/** ボタンのカラー **/
+/** コンポーネント **/
+/*
+ 以下は CRP インストール時に結合されるため、各部品に変更がない場合は
+ IDE 上で LESS コンパイルエラーが表示される場合があります。
+ デプロイ時には問題ありませんのでそのままコミットしてください。
+
+ 自治体ごとに変更する場合のみ下記部品を _base_* から複製して編集してください。
+ */
+/* =========================
+  共通のパラメータ定義
+========================= */
+/* ========================================================
+	reset.css => margin,padding等リセットCSS
+======================================================== */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  font-size: 100%;
+  font-family: inherit;
+}
+fieldset,
+img {
+  border: 0;
+}
+img {
+  vertical-align: top;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+}
+select,
+input,
+textarea {
+  font-size: 100%;
+}
+hr {
+  display: none;
+}
+input[type="submit"],
+button[type="submit"],
+input[type="text"] {
+  -webkit-appearance: none;
+}
+/** =====================
+        汎用クラス
+====================== **/
+.text-warning,
+.alert-error {
+  color: #ff1515;
+}
+.text-information {
+  color: #f87c00;
+}
+.text-note {
+  color: #0096ff;
+}
+.text-normal {
+  color: #956544;
+}
+.text-active {
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #f87c00;
+}
+.text-inactive {
+  opacity: 0.5;
+}
+.text-smaller {
+  font-size: 80%;
+}
+.text-larger {
+  font-size: 120%;
+}
+.center-align {
+  text-align: center !important;
+}
+.right-align {
+  text-align: right !important;
+}
+.pull-right {
+  float: right !important;
+}
+.spacer-t10 {
+  margin-top: 10px !important;
+}
+.spacer-t20 {
+  margin-top: 20px !important;
+}
+.spacer-b20 {
+  margin-bottom: 20px !important;
+}
+.spacer-t30 {
+  margin-top: 30px !important;
+}
+.spacer-b30 {
+  margin-bottom: 30px !important;
+}
+.spacer-t40 {
+  margin-top: 40px !important;
+}
+.spacer-b40 {
+  margin-bottom: 40px !important;
+}
+.spacer-t50 {
+  margin-top: 50px !important;
+}
+.spacer-b50 {
+  margin-bottom: 50px !important;
+}
+.spacer-t60 {
+  margin-top: 60px !important;
+}
+.spacer-b60 {
+  margin-bottom: 60px !important;
+}
+.spacer-t70 {
+  margin-top: 70px !important;
+}
+.spacer-b70 {
+  margin-bottom: 70px !important;
+}
+.spacer-t80 {
+  margin-top: 80px !important;
+}
+.spacer-b80 {
+  margin-bottom: 80px !important;
+}
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+.word-break {
+  word-break: break-all;
+}
+.non-decoration-link {
+  text-decoration: none;
+  color: #956544;
+}
+.article {
+  white-space: pre-wrap;
+}
+.article img {
+  max-width: 600px;
+}
+.notice-message,
+.noticeMessage {
+  background: #DCFFD5;
+  border: solid 1px #B8E09E;
+  padding: 3px 7px;
+  color: green;
+  border-radius: 4px;
+}
+.notice-message.error,
+.noticeMessage.error {
+  background: #ffcbda;
+  border: 1px solid #ff4d4d;
+  color: #ff1515;
+}
+.errorMessage {
+  background: #FFF2D5;
+  border: solid 1px #E0BC9E;
+  padding: 3px 7px;
+  color: #E04B28;
+  border-radius: 4px;
+}
+.centered {
+  text-align: center;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/** =====================
+     画像ファイルの URL
+====================== **/
+/* =========================
+  ボタン
+========================= */
+.btn {
+  display: inline-block;
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 12px 20px;
+  font-size: 1rem;
+  line-height: 1.42857;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+}
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  outline: 0;
+  background-image: none;
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+}
+.btn-default {
+  color: #333333;
+  background: #f8eff0;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f7f7f7 0%, #dfe3e7 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(100%, #dfe3e7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f7f7f7 0%, #dfe3e7 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f7f7f7 0%, #dfe3e7 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f7f7f7 0%, #dfe3e7 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f7f7f7 0%, #dfe3e7 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#dfe3e7', GradientType=0);
+  /* IE6-9 */
+  border-color: #fafafa #c8c8c8 #c0c0c0 #fafafa;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {
+  color: #333333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+.open .btn-default.dropdown-toggle {
+  color: #333333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+.open .btn-default.dropdown-toggle {
+  background-image: none;
+}
+.btn-default .badge {
+  color: white;
+  background-color: #333333;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+.color-btn-default {
+  border-radius: 5px;
+  color: white;
+  background-color: #a3ce69;
+  margin: 10px;
+  min-width: 7rem;
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75);
+}
+.color-btn-default:hover {
+  text-decoration: none;
+  border: solid 1px #8aab5e;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.color-btn-default:active {
+  text-decoration: none;
+  border: solid 1px #8aab5e;
+}
+.color-btn-huge {
+  font-size: 1.5rem;
+  margin: 0 8px;
+  padding: 35px 0;
+  height: 55px;
+  width: 288px;
+  border-radius: 5px;
+}
+.color-btn-normal {
+  font-size: 1.3rem;
+  min-width: 7rem;
+  display: block;
+}
+.top-enter-action a {
+  text-decoration: none;
+  color: white;
+}
+.top-enter-action .enter-action-button {
+  display: block;
+  position: relative;
+  font-size: 1.5rem;
+  width: 230px;
+  height: 4rem;
+  line-height: 4rem;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+.top-enter-action .color-button-register {
+  display: block;
+  position: relative;
+  font-size: 1.5rem;
+  width: 230px;
+  height: 4rem;
+  line-height: 4rem;
+  margin: 20px auto;
+  border-radius: 8px;
+  margin-left: 1.5rem;
+  background: #f3b751;
+}
+.top-enter-action .color-button-login {
+  display: block;
+  position: relative;
+  font-size: 1.5rem;
+  width: 230px;
+  height: 4rem;
+  line-height: 4rem;
+  margin: 20px auto;
+  border-radius: 8px;
+  margin-right: 1.5rem;
+  background: #a3ce69;
+}
+.top-enter-action .button-text-img {
+  display: block;
+  width: 90%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.color-btn-to-top {
+  border-radius: 100px;
+  border: solid 10px #FCF6EE;
+  color: white;
+  background-color: #ff7f28;
+  font-size: 40px;
+  font-weight: bolder;
+  position: fixed;
+  bottom: 110px;
+  width: 55px;
+  padding: 10px 10px;
+  margin-left: 510px;
+}
+/* =========================
+  テキストボックス/テキストエリア
+========================= */
+.text-box {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+.text-box.text-box-short {
+  width: 5rem;
+}
+.text-box.text-box-wide {
+  width: 100%;
+}
+.text-box[type="number"] {
+  text-align: right;
+}
+.text-area.text-area-full-width {
+  width: 100%;
+}
+input[type=file] {
+  font-size: initial;
+}
+/* =========================
+  入力フォームの部品類
+========================= */
+.input-required {
+  display: inline-block;
+  background-color: #ff1010;
+  color: white;
+  font-size: 0.8rem;
+  padding: 1px 6px;
+  border-radius: 5px;
+}
+.input-remarks {
+  color: #0096ff;
+  font-size: 0.8rem;
+}
+/* =========================
+  共通ヘッダー
+========================= */
+.page-header {
+  width: 640px;
+  border-bottom: 2px solid #F5EEE5;
+  position: fixed;
+  top: 0;
+  padding: 30px 0;
+  z-index: 100;
+  background: white;
+  color: #956544;
+}
+.page-header.header-logo {
+  padding: 0;
+}
+.page-header.header-logo .header-logo-img {
+  width: 640px;
+}
+.page-header .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  min-height: 1.5rem;
+}
+.page-header .back {
+  position: absolute;
+  left: 30px;
+  vertical-align: middle;
+  text-align: center;
+}
+.page-header .menu-bars {
+  position: absolute;
+  height: 1rem;
+  line-height: 1rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+@keyframes slide-in-r2l {
+  from {
+    left: 640px;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slide-out-l2r {
+  from {
+    left: 0;
+  }
+  to {
+    left: 640px;
+  }
+}
+.slide-menu {
+  width: 600px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 640px;
+  z-index: 1000;
+  opacity: 0.95;
+  background: #a6864d;
+  padding: 20px;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+}
+.slide-menu .slide-menu-items {
+  margin-top: 4rem;
+}
+.slide-menu .slide-menu-item {
+  border-bottom: 1px white solid;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.slide-menu .slide-menu-item a {
+  text-decoration: none;
+  color: white;
+}
+.slide-menu .slide-menu-item .left-arrow {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.slide-menu .slide-menu-close-button {
+  float: right;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  color: #a6864d;
+  background-color: white;
+}
+.slide-menu .slide-menu-close-button .slide-menu-close-icon {
+  text-align: center;
+  font-size: 2rem;
+}
+.slide-menu .slide-menu-close-button .slide-menu-close-text {
+  font-size: 0.5rem;
+}
+/* =========================
+  お知らせ
+========================= */
+.notifications {
+  padding: 20px 30px;
+  border-radius: 30px;
+}
+.notifications.notification-from-municipal {
+  background-color: #ffffff;
+}
+.notifications.notification-epidemics {
+  background-color: #FCF6EE;
+}
+.notifications .notification {
+  display: block;
+  text-decoration: none;
+  color: #956544;
+}
+.notifications .notification:not(:first-child) {
+  margin-top: 0.5rem;
+}
+.notifications .published-date {
+  font-weight: bold;
+}
+.notifications .notification-text {
+  color: #333333;
+  margin-left: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notifications .more {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+.notifications .new {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #ff1515;
+}
+.epidemics-link {
+  display: block;
+  font-weight: bold;
+  margin-left: 1rem;
+  margin-top: 0.2rem;
+  text-decoration: none;
+  color: #956544;
+}
+/* =========================
+  グローバルメニュー
+========================= */
+.global-menu-position {
+  width: 640px;
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  border-top: 2px solid #F5EEE5;
+  z-index: 100;
+}
+.global-menu {
+  width: inherit;
+  height: inherit;
+  background-color: #FFFFFF;
+  color: #d9cbc3;
+}
+.global-menu a {
+  text-decoration: none;
+  color: #d9cbc3;
+}
+.global-menu .global-menu-item {
+  display: inline-block;
+  width: 113px;
+  margin: 0 4px;
+}
+.global-menu .global-menu-item .global-menu-icon {
+  text-align: center;
+}
+.global-menu .global-menu-item .global-menu-icon .icon-img {
+  display: block;
+  width: 2rem;
+  margin: 10px auto;
+}
+.global-menu .global-menu-item .global-menu-icon .icon-svg {
+  width: 50px;
+  margin: 10px auto 0 auto;
+}
+.global-menu .global-menu-item .global-menu-icon .icon {
+  fill: #d9cbc3;
+}
+.global-menu .global-menu-item .global-menu-description {
+  text-align: center;
+  font-size: 15px;
+}
+.global-menu .global-menu-item.active .global-menu-icon .icon {
+  fill: #ff7f28;
+}
+.global-menu .global-menu-item.active a {
+  color: #ff7f28;
+  text-decoration: none;
+}
+/* =========================
+  見出し
+========================= */
+.caption {
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 20px 0;
+}
+.caption .caption-icon {
+  color: white;
+  font-weight: bold;
+  padding: 7px;
+  background-color: #ff7f28;
+  border-radius: 1em;
+}
+/* =========================
+  スケジュール
+========================= */
+/* タブ形式のやつ */
+.schedules .text-warning {
+  margin: 0.5rem 1rem;
+}
+.schedule {
+  min-height: 100%;
+}
+.schedule .on-the-date {
+  margin: 20px 0 30px 0;
+}
+.schedule .on-the-date .date {
+  margin-left: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.schedule .vaccine {
+  border-radius: 30px;
+}
+.schedule .vaccine .times {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #ffb0b0;
+  color: #956544;
+}
+.schedule .vaccine .expense.public {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #55ccff;
+  color: #956544;
+}
+.schedule .vaccine .expense.subsidy {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #55ccff;
+  color: #956544;
+}
+.schedule .vaccine .expense.private {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #ffdd99;
+  color: #956544;
+}
+.schedule .vaccine .note {
+  font-size: 0.7rem;
+}
+/* 予定を過ぎても接種記録がついていないやつ */
+.unreported-slates {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid #ff1515;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.unreported-slates .for-date {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+/* 本日接種予定のもの */
+.today-slates {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0.1rem solid #ff7f28;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.today-slates .for-date {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+/* =========================
+  情報ページ
+========================= */
+.announcement-categories {
+  table-layout: fixed;
+  width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: separate;
+  border-spacing: 1rem;
+}
+.announcement-categories .category {
+  height: 200px;
+  text-align: center;
+  color: #926240;
+  background-color: #ffeed9;
+  border-radius: 2rem;
+}
+.announcement-categories .category a {
+  color: inherit;
+  text-decoration: none;
+}
+.announcement-categories .category .icon .panel-img {
+  width: 4.5rem;
+}
+.announcement-categories .category .name {
+  margin-top: 0.5rem;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.announcement-article h1 {
+  margin: 10px 0 15px 0;
+  padding: 5px 10px;
+  border-bottom: 5px solid #fead81;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: #fead81;
+}
+.announcement-article * + h1 {
+  margin-top: 2rem;
+}
+.announcement-article h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin: 0.5rem;
+  margin-top: 1rem;
+}
+.announcement-article h3 {
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+.announcement-article h4 {
+  font-size: 1.1rem;
+}
+.announcement-article ul {
+  margin: 0.5rem;
+}
+.announcement-article ul li {
+  list-style: disc;
+  list-style-position: inside;
+}
+.announcement-article hr {
+  display: block;
+  border: solid 1px #ff7f28;
+}
+.announcement-article img {
+  max-width: 100%;
+}
+/* =========================
+  情報ページ
+========================= */
+.settings .add-child {
+  text-decoration: none;
+  color: #956544;
+  text-align: right;
+  color: #ff7f28;
+  margin: 10px 20px;
+}
+.settings .add-sub-member {
+  text-decoration: none;
+  color: #956544;
+  text-align: right;
+  color: #ff7f28;
+  margin: 10px 20px;
+}
+/* =========================
+  画面のセクションを分断する区切り線
+  自治体ごとにデザインが変わることが多くなる予感がしたので個別のファイルにした
+========================= */
+.divide-line {
+  height: 5px;
+  margin: 20px 0 20px 0;
+  background-color: #ff7f28;
+  border-radius: 5px;
+}
+/* =========================
+  アクションメッセージ
+========================= */
+.next-actions .action-message {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px 30px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  position: relative;
+}
+.next-actions .action-message .arrow-next {
+  position: absolute;
+  height: 1rem;
+  line-height: 1rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+}
+.next-actions .action-message .action-link {
+  text-decoration: none;
+  color: #956544;
+}
+/* =========================
+  施設検索
+========================= */
+.institution .type-tag {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #55ccff;
+  color: #956544;
+}
+.institution .service-tag {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #ffdd99;
+  color: #956544;
+}
+/* =========================
+  医療機関検索
+========================= */
+.hospital .vaccine-tag {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #ffdd99;
+  color: #956544;
+}
+.hospital .department-tag {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #55ccff;
+  color: #956544;
+}
+.hospital-detail {
+  margin-top: 20px !important;
+  margin-bottom: 40px !important;
+  word-break: break-all;
+}
+/* =========================
+  保育連携施設
+========================= */
+.notification-nurseries {
+  padding: 20px 30px;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+.notification-nurseries .published-date {
+  font-weight: bold;
+}
+.notification-nurseries .notification-text {
+  color: #333333;
+  margin-left: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notification-nurseries .new {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #ff1515;
+}
+.notification-nurseries .notification-item {
+  display: block;
+  text-decoration: none;
+  color: #956544;
+}
+.notification-nurseries .notification-item + .notification-item {
+  margin-top: 0.5rem;
+}
+.nursery .more {
+  margin-top: 0.3rem;
+  font-weight: bold;
+  text-align: right;
+}
+.nursery .type-tag {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #55ccff;
+  color: #956544;
+}
+.nursery .service-tag {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #ffdd99;
+  color: #956544;
+}
+.nursery-detail {
+  width: 100%;
+  word-break: break-all;
+}
+.nursery-detail th {
+  width: 30%;
+}
+.nursery-detail td {
+  width: 70%;
+}
+/* =========================
+  ツールバー
+========================= */
+.toolbar {
+  height: 3rem;
+}
+.toolbar .tool.left {
+  float: left;
+}
+.toolbar .tool.right {
+  float: right;
+}
+.center-toolbar {
+  margin: 20px 20px;
+}
+/* =========================
+  サイト内検索
+========================= */
+.keyword-search {
+  position: relative;
+}
+.keyword-search input[type="text"].keyword-search-input {
+  height: 2rem;
+  line-height: 2rem;
+  display: inline-block;
+  border: 1px #333333 solid;
+  font-size: 1rem;
+  width: 97%;
+  padding: 0;
+}
+.keyword-search .keyword-search-button {
+  display: inline-block;
+  border: 3px #ff7f28 solid;
+  background-color: #ff7f28;
+  color: #926240;
+  font-size: 1.3rem;
+  height: 2.1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* =========================
+   ページネータ
+========================= */
+.pagination {
+  text-align: center;
+}
+.pagination .paging-item {
+  display: inline-block;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+.pagination .prev {
+  display: inline-block;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+.pagination .next {
+  display: inline-block;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+.pagination .page-number {
+  display: inline-block;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+.pagination .gap {
+  display: inline-block;
+}
+.pagination .summary {
+  text-align: right;
+}
+/* =========================
+  外部リンクへのクッションページ
+========================= */
+.external-cushion .url {
+  word-break: break-all;
+}
+/* =========================
+  BBS
+========================= */
+.bbs .more {
+  margin-top: 0.3rem;
+  font-weight: bold;
+  text-align: right;
+}
+.bbs .type-tag {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #55ccff;
+  color: #956544;
+}
+.bbs .service-tag {
+  border-radius: 15px;
+  font-weight: normal;
+  font-size: 0.7rem;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #ffdd99;
+  color: #956544;
+}
+.bbs .thread {
+  border: solid #0511be 3px;
+  border-radius: 20px;
+  background-color: white;
+}
+.bbs .thread article {
+  margin: 20px 0;
+}
+.bbs .thread .thread-reply {
+  background: #0000ff33;
+}
+.bbs .topic {
+  font-size: 20px;
+}
+.bbs .comment {
+  border: solid orange 3px;
+  border-radius: 20px;
+  background-color: white;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.bbs .comment .comment-reply {
+  background: #ffa50045;
+}
+.bbs .admin_comment {
+  background-color: pink;
+  color: black;
+}
+/* =========================
+  アプリダウンロードボタン
+========================= */
+.application-download .application-download-title {
+  font-weight: bold;
+}
+.application-download a,
+.application-download a:link,
+.application-download a:hover,
+.application-download a:visited {
+  text-decoration: none;
+}
+.application-download a img,
+.application-download a:link img,
+.application-download a:hover img,
+.application-download a:visited img {
+  width: 290px;
+  height: 86px;
+  margin: 5px;
+}
+/* =========================
+  成長記録
+========================= */
+.growth-graphs {
+  width: 540px;
+  margin: 0 auto;
+}
+.growth-graphs .prev-arrow,
+.growth-graphs .next-arrow {
+  position: absolute;
+  height: 1em;
+  line-height: 1em;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 100;
+}
+.growth-graphs .prev-arrow {
+  left: -2rem;
+}
+.growth-graphs .next-arrow {
+  right: -2rem;
+}
+.growth-graphs .growth-graph .growth-graph-img {
+  margin: 0 auto;
+}
+/** =====================
+      コンポーネント
+====================== **/
+.page-container input[type=text] {
+  height: 35px;
+}
+.page-container input[type=password] {
+  height: 35px;
+}
+.page-container input[type=radio] {
+  width: 25px;
+  height: 25px;
+}
+.page-container input[type=checkbox] {
+  width: 25px;
+  height: 25px;
+}
+.page-container select {
+  font-size: 140%;
+}
+.page-container .image-list {
+  padding: 0;
+  margin: 0 auto;
+  clear: both;
+  overflow: hidden;
+}
+.page-container .image-list > li {
+  list-style-type: none;
+  float: left;
+  width: 33.33%;
+  margin: 8px 0;
+}
+.page-container .image-list > li .frame {
+  -webkit-box-shadow: 2px 2px 4px #d3cbc2;
+  -moz-box-shadow: 2px 2px 4px #d3cbc2;
+  box-shadow: 2px 2px 4px #d3cbc2;
+}
+.page-container .image-list > li img {
+  width: 99%;
+}
+.page-container .image-list > li img:hover {
+  opacity: .7;
+}
+.theme-color-button {
+  float: left;
+  padding: 0;
+  margin: 15px;
+  width: 70px;
+  height: 70px;
+}
+.theme-color-button input[type=radio] {
+  display: none;
+}
+.theme-color-button .alter-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.theme-color-button input[type=radio]:checked + .alter-button {
+  border: solid white 3px;
+  box-shadow: 0 0 0 5px #555;
+  width: 64px;
+  height: 64px;
+}
+input[type="submit"].button-block,
+input[type="reset"].button-block,
+input[type="button"].button-block {
+  width: 100%;
+}
+.guide-box {
+  background: #e5e5e5;
+  padding: 10px;
+}
+.ruled-table {
+  width: 100%;
+}
+.ruled-table th,
+.ruled-table td {
+  border-bottom: solid 1px #ffb8a5;
+  padding: 0.2rem 0.1rem;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  border-radius: 4px;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb > li a,
+.breadcrumb > li a:link {
+  text-decoration: none;
+}
+.breadcrumb > li a:hover {
+  text-decoration: underline;
+}
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #cccccc;
+}
+.breadcrumb > .active {
+  color: #999999;
+}
+.debug-box th {
+  padding: 4px;
+  border: solid 1px blue;
+  background: blue;
+  color: white;
+}
+.debug-box td {
+  padding: 4px;
+  border: solid 1px blue;
+  color: blue;
+}
+.clock-for-test {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #00dfa6;
+  opacity: 0.7;
+}
+.clock-for-test .time {
+  font-family: Consolas;
+}
+.goog-te-menu-value {
+  font-size: 30px;
+}
+.goog-te-menu-value img {
+  width: 0;
+  height: 30px;
+}
+.tbx {
+  border: solid 1px #bbbbbb;
+  border-radius: 4px;
+  padding: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.tbx:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.tbx.tbx-required {
+  background-color: #ffde7f;
+}
+.tbx.tbx-invalid {
+  background-color: #ff7970;
+}
+.tbx.tbx-valid {
+  background-color: #6ddcc8;
+}
+.tbx.tbx-100 {
+  width: 100px;
+}
+.tbx.tbx-150 {
+  width: 150px;
+}
+.tbx.tbx-200 {
+  width: 200px;
+}
+.tbx.tbx-400 {
+  width: 400px;
+}
+.tbx.tbx-500 {
+  width: 500px;
+}
+.tbx.tbx-full {
+  width: 100%;
+}
+/** =====================
+        レイアウト
+====================== **/
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 160%;
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  line-height: 1.5;
+  color: #956544;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 'lucida grande', tahoma, verdana, arial, "hiragino kaku gothic pro", meiryo, "ms pgothic", sans-serif, FontAwesome;
+  -webkit-text-size-adjust: 100%;
+}
+.page-container {
+  width: 640px;
+  min-height: 100%;
+  margin: 0 auto;
+  background: #fcf7ef;
+}
+.main-content {
+  padding-top: 0;
+  padding-bottom: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.main-content.no-side-margin {
+  padding-left: 0;
+  padding-right: 0;
+}
+.main-content.no-header {
+  padding-top: 0;
+}
+.main-content.no-footer {
+  padding-bottom: 0;
+}
+.list-header {
+  margin: 10px 0 15px 0;
+  padding: 5px 10px;
+  border-bottom: 5px solid #fead81;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: #fead81;
+}
+.list .list-item {
+  color: #a68269;
+  padding: 18px 40px 18px 30px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  border-radius: 18px;
+  position: relative;
+}
+.list .list-item .list-item-link {
+  display: block;
+  text-decoration: none;
+  color: #956544;
+  color: inherit;
+}
+.list .list-item .name {
+  font-weight: bold;
+}
+.list .list-item .note {
+  font-size: 0.7rem;
+}
+.list .list-item .arrow-next {
+  position: absolute;
+  height: 1rem;
+  line-height: 1rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group > p {
+  margin-bottom: 10px;
+}
+.button-area {
+  overflow: auto;
+}
+.button-area .left {
+  float: left;
+}
+.button-area .right {
+  float: right;
+}
+.button-area .button-group {
+  clear: both;
+  overflow: auto;
+}
+.tab-group .tabs {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-bottom: 20px;
+  z-index: 101;
+  background: #fcf7ef;
+  overflow-x: scroll;
+  white-space: nowrap;
+  border-bottom: 8px solid #ff7f28;
+  -ms-overflow-style: none;
+}
+.tab-group .tabs::-webkit-scrollbar {
+  display: none;
+}
+.tab-group .tabs .add-button {
+  display: inline-block;
+  color: #ff7f28;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 10px 0 20px;
+}
+.tab-group .tabs .add-button a {
+  color: inherit;
+}
+.tab-group .tabs .tab {
+  padding: 10px 20px;
+  display: inline-block;
+  color: #926240;
+  background-color: #ff7f28;
+  border-top-left-radius: 20px 20px;
+  border-top-right-radius: 20px 20px;
+}
+.tab-group .tabs .tab:not(.active) {
+  opacity: 0.7;
+}
+.tab-group .contents .content:not(:first-child) {
+  display: none;
+}
+.form-grid th,
+.form-grid td,
+.form-grid .form-group {
+  padding: 1rem 0;
+}
+.context-area {
+  margin: 10px 0 15px 0;
+  padding: 5px 10px;
+  border-bottom: 5px solid #fead81;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: #fead81;
+}
+.top-notification-area {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.fit-top-table tr {
+  vertical-align: baseline;
+}
+.calendar .date {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.calendar .schedule-list .daily-schedule {
+  display: block;
+  margin: 20px 0;
+}
+.calendar .schedule-list .daily-schedule .slate-type-group {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: white;
+  margin-bottom: 1rem;
+}
+.calendar .schedule-list .daily-schedule .slate-type {
+  font-weight: bold;
+}
+.calendar .schedule-list .daily-schedule .slate-list {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+/* =========================================
+  自治体固有設定
+========================================= */
+.announcement-categories .category .name {
+  font-size: 0.9rem;
+}
