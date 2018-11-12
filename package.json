@@ -1,0 +1,9 @@
+{
+  "name": "css-ast-diff",
+  "version": "0.0.1",
+  "description": "CSSファイルを抽象構文木レベルで比較するツール",
+  "main": "index.js",
+  "repository": "https://github.com/milabo/css-ast-diff",
+  "author": "milabo",
+  "license": "MIT"
+}
